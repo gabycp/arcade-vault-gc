@@ -15,4 +15,13 @@ https://github.com/Klerith/fernando-skills
 npx skills@latest add Klerith/fernando-skills
 ```
 
+## Commands
+
+```bash
+npm run dev     # next dev
+npm run build   # next build
+npm run start   # next start
+npm run lint    # eslint (flat config in eslint.config.mjs)
+```
+
 ## Hola Mundo
