@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Courier_Prime, JetBrains_Mono, Press_Start_2P } from "next/font/google";
 import "./globals.css";
+import { Footer } from "./components/footer";
+import { Nav } from "./components/nav";
 import { SessionProvider } from "./components/session-provider";
 
 const pressStart = Press_Start_2P({
@@ -36,7 +38,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="av-bg" />
         <div className="av-noise" />
         <SessionProvider>
-          <div id="app-root">{children}</div>
+          <div id="app-root">
+            <Nav />
+            <main className="av-main">{children}</main>
+            <Footer />
+          </div>
         </SessionProvider>
       </body>
     </html>
