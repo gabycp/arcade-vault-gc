@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { GAMES } from "@/app/data/games";
 import { SCORES } from "@/app/data/scores";
 
@@ -7,9 +8,23 @@ export function generateStaticParams() {
   return GAMES.map((g) => ({ id: g.id }));
 }
 
-export default async function GameDetailPage({
-  params,
-}: PageProps<"/juegos/[id]">) {
+type Params = PageProps<"/juegos/[id]">["params"];
+
+export default function GameDetailPage({ params }: PageProps<"/juegos/[id]">) {
+  return (
+    <Suspense
+      fallback={
+        <div className="pixel p-20 text-center text-xs text-[var(--ink-faint)]">
+          CARGANDO…
+        </div>
+      }
+    >
+      <GameDetail params={params} />
+    </Suspense>
+  );
+}
+
+async function GameDetail({ params }: { params: Params }) {
   const { id } = await params;
   const game = GAMES.find((g) => g.id === id);
   if (!game) notFound();
