@@ -31,7 +31,8 @@
   --bronze: #d97a3a;
   --line: rgba(0, 245, 255, 0.18);
   --line-2: rgba(255, 255, 255, 0.06);
-  --pixel: var(--font-press-start), "Press Start 2P", system-ui, monospace;
+  /* Sin var(--font-press-start): su fallback ajustado de next/font cambia el ancho de glifos ausentes como ♥ */
+  --pixel: "Press Start 2P", system-ui, monospace;
   --mono: var(--font-jetbrains-mono), "JetBrains Mono", var(--font-courier-prime), "Courier Prime", "Courier New", monospace;
 }
 
@@ -315,6 +316,7 @@ a { color: inherit; text-decoration: none; }
 .av-search input {
   flex: 1; background: transparent; border: 0; outline: 0;
   color: var(--ink); font-size: 13px; letter-spacing: 0.04em;
+  padding: 1px 2px; /* Tailwind preflight lo pone a 0; la plantilla usa el valor por defecto del navegador */
 }
 .av-search input::placeholder { color: var(--ink-faint); }
 .av-search .ico { color: var(--cyan); font-family: var(--pixel); font-size: 11px; }

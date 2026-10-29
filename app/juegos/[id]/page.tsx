@@ -53,13 +53,13 @@ async function GameDetail({ params }: { params: Params }) {
             </div>
             <div>
               <div className="l">Mejor global</div>
-              <div className="v text-magenta [text-shadow:0_0_6px_rgba(255,0,110,0.5)]">
+              <div className="v !text-magenta ![text-shadow:0_0_6px_rgba(255,0,110,0.5)]">
                 {game.best.toLocaleString("es-ES")}
               </div>
             </div>
             <div>
               <div className="l">Dificultad</div>
-              <div className="v text-yellow [text-shadow:0_0_6px_rgba(245,255,0,0.5)]">
+              <div className="v !text-yellow ![text-shadow:0_0_6px_rgba(245,255,0,0.5)]">
                 ★ ★ ★ ☆ ☆
               </div>
             </div>

@@ -83,9 +83,9 @@ export function HallOfFame() {
         </div>
         <div className="podium-slot gold">
           <div className="pixel text-[9px] tracking-[0.18em] text-gold">CAMPEÓN</div>
-          <div className="rank-num mt-1 text-[36px]">01</div>
+          <div className="rank-num mt-1 !text-[36px]">01</div>
           <div className="name">{rows[0].name}</div>
-          <div className="score text-xl">{rows[0].score.toLocaleString("es-ES")}</div>
+          <div className="score !text-[20px]">{rows[0].score.toLocaleString("es-ES")}</div>
           <div className="date">{rows[0].date}</div>
         </div>
         <div className="podium-slot bronze">
@@ -127,18 +127,20 @@ export function HallOfFame() {
             >
               {mine && youRank !== null ? (
                 <>
-                  <div className="rk text-yellow">#{pad(youRank)}</div>
-                  <div className="pl text-yellow">{user.name}</div>
-                  <div className="sc text-yellow [text-shadow:0_0_6px_rgba(245,255,0,0.5)]">
+                  <div className="rk !text-yellow">#{pad(youRank)}</div>
+                  <div className="pl !text-yellow">{user.name}</div>
+                  <div className="sc !text-yellow ![text-shadow:0_0_6px_rgba(245,255,0,0.5)]">
                     {mine.score.toLocaleString("es-ES")}
                   </div>
                   <div className="dt">{formatDate(mine.at)}</div>
                 </>
               ) : (
                 <>
-                  <div className="rk text-yellow">—</div>
-                  <div className="pl text-yellow">{user.name}</div>
-                  <div className="sc text-yellow">SIN MARCA AÚN</div>
+                  <div className="rk !text-yellow">—</div>
+                  <div className="pl !text-yellow">{user.name}</div>
+                  <div className="sc !text-yellow ![text-shadow:0_0_6px_rgba(245,255,0,0.5)]">
+                    SIN MARCA AÚN
+                  </div>
                   <div className="dt">—</div>
                 </>
               )}
