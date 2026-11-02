@@ -1,6 +1,6 @@
 # SPEC 01 — MVP visual de Arcade Vault (pantallas)
 
-> **Status:** Aproved
+> **Status:** Implemented
 > **Depends on:** Ninguna
 > **Date:** 2026-10-23
 > **Objective:** Portar a Next.js (App Router) las 5 pantallas de `references/templates/` (biblioteca, detalle, reproductor, auth y salón de la fama) con datos ficticios, sin implementar ningún juego.
@@ -96,31 +96,31 @@ Convenciones:
 
 ## Criterios de aceptación
 
-- [ ] `npm run build` y `npm run lint` terminan sin errores.
-- [ ] `/` muestra las 8 tarjetas de juego con portada, categoría, descripción corta y mejor puntuación.
-- [ ] Escribir "gl" en la búsqueda deja solo la tarjeta GLOTÓN; una búsqueda sin coincidencias muestra "NO HAY RESULTADOS".
-- [ ] Cada chip de categoría filtra la grilla y "TODOS" la restaura.
-- [ ] Hacer clic en una tarjeta o en su botón JUGAR navega a `/juegos/<id>`.
-- [ ] `/juegos/<id>` muestra título, descripción larga, 4 tags, tres estadísticas y 10 filas en "MEJORES PUNTUACIONES", con las 3 primeras destacadas.
-- [ ] `/juegos/no-existe` muestra la página 404.
-- [ ] "JUGAR AHORA" lleva a `/juegos/<id>/jugar` y "VOLVER AL VAULT" a `/`.
-- [ ] En `/juegos/<id>/jugar` el puntaje sube solo mientras no hay pausa ni fin de juego.
-- [ ] PAUSA detiene el puntaje y muestra "EN PAUSA"; REANUDAR lo retoma.
-- [ ] FIN abre el modal con la puntuación final; GUARDAR PUNTUACIÓN escribe una entrada en `localStorage["av_scores"]` y muestra "PUNTUACIÓN GUARDADA".
-- [ ] El campo de iniciales del modal convierte a mayúsculas y limita a 10 caracteres.
-- [ ] JUGAR DE NUEVO reinicia puntaje, vidas y nivel; SALIR vuelve a `/juegos/<id>`.
-- [ ] En `/auth`, la pestaña "CREAR CUENTA" muestra el campo de correo y "INICIAR SESIÓN" lo oculta.
-- [ ] Enviar el formulario con usuario "kai" redirige a `/` y el nav muestra "KAI"; recargar la página mantiene el nombre.
-- [ ] "JUGAR COMO INVITADO" redirige a `/` y el nav muestra "Iniciar Sesión".
-- [ ] Hacer clic en el nombre del usuario en el nav cierra la sesión y borra `av_user`.
-- [ ] `/salon` muestra una pestaña por juego (8), el podio con 3 posiciones y una tabla con 12 filas; cambiar de pestaña cambia los datos.
-- [ ] En `/salon`, la fila "TU MEJOR MARCA" aparece solo con sesión iniciada.
-- [ ] Con sesión iniciada y sin puntuaciones guardadas para el juego activo, la fila "TU MEJOR MARCA" muestra "SIN MARCA AÚN".
-- [ ] Tras guardar una puntuación como KAI en un juego, `/salon` muestra esa marca en la fila "TU MEJOR MARCA" de la pestaña de ese juego.
-- [ ] A 375 px de ancho el nav muestra el botón hamburguesa y el panel lateral abre y cierra con su backdrop.
-- [ ] El link activo del nav se resalta en `/`, `/juegos/*` (Biblioteca) y `/salon`.
-- [ ] No hay errores de hidratación ni warnings en la consola del navegador al navegar por las 5 pantallas.
-- [ ] No queda ningún `import` de `next/image` ni de assets del scaffold sin usar en `app/`.
+- [x] `npm run build` y `npm run lint` terminan sin errores.
+- [x] `/` muestra las 8 tarjetas de juego con portada, categoría, descripción corta y mejor puntuación.
+- [x] Escribir "gl" en la búsqueda deja solo la tarjeta GLOTÓN; una búsqueda sin coincidencias muestra "NO HAY RESULTADOS".
+- [x] Cada chip de categoría filtra la grilla y "TODOS" la restaura.
+- [x] Hacer clic en una tarjeta o en su botón JUGAR navega a `/juegos/<id>`.
+- [x] `/juegos/<id>` muestra título, descripción larga, 4 tags, tres estadísticas y 10 filas en "MEJORES PUNTUACIONES", con las 3 primeras destacadas.
+- [x] `/juegos/no-existe` muestra la página 404.
+- [x] "JUGAR AHORA" lleva a `/juegos/<id>/jugar` y "VOLVER AL VAULT" a `/`.
+- [x] En `/juegos/<id>/jugar` el puntaje sube solo mientras no hay pausa ni fin de juego.
+- [x] PAUSA detiene el puntaje y muestra "EN PAUSA"; REANUDAR lo retoma.
+- [x] FIN abre el modal con la puntuación final; GUARDAR PUNTUACIÓN escribe una entrada en `localStorage["av_scores"]` y muestra "PUNTUACIÓN GUARDADA".
+- [x] El campo de iniciales del modal convierte a mayúsculas y limita a 10 caracteres.
+- [x] JUGAR DE NUEVO reinicia puntaje, vidas y nivel; SALIR vuelve a `/juegos/<id>`.
+- [x] En `/auth`, la pestaña "CREAR CUENTA" muestra el campo de correo y "INICIAR SESIÓN" lo oculta.
+- [x] Enviar el formulario con usuario "kai" redirige a `/` y el nav muestra "KAI"; recargar la página mantiene el nombre.
+- [x] "JUGAR COMO INVITADO" redirige a `/` y el nav muestra "Iniciar Sesión".
+- [x] Hacer clic en el nombre del usuario en el nav cierra la sesión y borra `av_user`.
+- [x] `/salon` muestra una pestaña por juego (8), el podio con 3 posiciones y una tabla con 12 filas; cambiar de pestaña cambia los datos.
+- [x] En `/salon`, la fila "TU MEJOR MARCA" aparece solo con sesión iniciada.
+- [x] Con sesión iniciada y sin puntuaciones guardadas para el juego activo, la fila "TU MEJOR MARCA" muestra "SIN MARCA AÚN".
+- [x] Tras guardar una puntuación como KAI en un juego, `/salon` muestra esa marca en la fila "TU MEJOR MARCA" de la pestaña de ese juego.
+- [x] A 375 px de ancho el nav muestra el botón hamburguesa y el panel lateral abre y cierra con su backdrop.
+- [x] El link activo del nav se resalta en `/`, `/juegos/*` (Biblioteca) y `/salon`.
+- [x] No hay errores de hidratación ni warnings en la consola del navegador al navegar por las 5 pantallas.
+- [x] No queda ningún `import` de `next/image` ni de assets del scaffold sin usar en `app/`.
 
 ## Decisiones tomadas y descartadas
 
