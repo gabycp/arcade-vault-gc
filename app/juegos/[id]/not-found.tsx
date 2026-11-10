@@ -8,7 +8,7 @@ export default function GameNotFound() {
       <p className="mb-8 text-[var(--ink-dim)]">
         Este cartucho no existe en el Vault.
       </p>
-      <Link href="/" className="btn">
+      <Link href="/biblioteca" className="btn">
         VOLVER AL VAULT
       </Link>
     </div>
