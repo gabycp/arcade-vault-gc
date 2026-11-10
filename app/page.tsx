@@ -11,7 +11,7 @@ const FEATURES: { icon: FeatureIconKind; title: string; desc: string; color: Acc
   {
     icon: "GAMEPAD",
     title: "JUEGOS CLÁSICOS",
-    desc: "Arkanoid, Tetris, Snake y muchos más. Los mejores arcades de todos los tiempos en un solo lugar.",
+    desc: "Bloque Buster, Caída, Serpentina y muchos más. Los mejores arcades de todos los tiempos en un solo lugar.",
     color: "cyan",
   },
   {
@@ -35,7 +35,7 @@ const FEATURES: { icon: FeatureIconKind; title: string; desc: string; color: Acc
 ];
 
 const STATS = [
-  { n: "12+", u: "JUEGOS", s: "Y CONTANDO" },
+  { n: String(GAMES.length), u: "JUEGOS", s: "Y CONTANDO" },
   { n: "MILES", u: "DE PARTIDAS", s: "JUGADAS CADA DÍA" },
   { n: "GLOBAL", u: "RANKING", s: "COMPITE CON EL MUNDO" },
 ];
