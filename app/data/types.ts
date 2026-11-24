@@ -20,6 +20,20 @@ export interface ScoreRow {
   date: string;
 }
 
+export interface ActivityEntry {
+  player: string;
+  gameId: string;
+  score: number;
+  ago: string;
+  color: AccentColor;
+}
+
+export interface TopPlayer {
+  rank: number;
+  player: string;
+  score: number;
+}
+
 export interface SessionUser {
   name: string;
 }
